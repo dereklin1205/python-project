@@ -47,20 +47,6 @@ class Player():
             if each.location == self.position:
                 return each
 
-    def buyaBuilding(self, isPressYes):  # 購買方法
-        if isPressYes and self.locatedBuilding.owner != self.name:  # 點擊YES鍵且此地沒有其他人購買
-            self.locatedBuilding.owner = self.name  # 這塊地變購買者的
-            self.locatedBuilding.wasBought = True  # 這塊地是建築(機會、命運、四角除外)
-            self.ownedBuildings.append(
-                self.locatedBuilding)  # 角色擁有的土地清單中,多了這塊地
-            self.money -= self.locatedBuilding.price  # 角色的錢=原本--土地的售價
-            self.showText = [self.name + '購買了' +
-                             self.locatedBuilding.name + '!']  # 顯示文字:角色購買這塊土地
-            self.soundPlayList = 1  # 背景音樂第1首
-            return True  # 回傳正確
-        else:
-            return False  # 購買失敗
-
 
 class Building():              # 好像所有功能都在Player類裏實現了=_=
     def __init__(self, name, price, payment, location, width, height):
