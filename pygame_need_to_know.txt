@@ -1,0 +1,52 @@
+pygame.transform.rotate(object,angel) #object rotation
+pygame.transform.scale(object,(size.x,size.y)) #object resize
+pygame.init()	 #pygame initialization
+win=pygame.display.set_mode(width,height) #windows size
+pygame.image.load(path)
+music = pygame.mixer.Sound(path)
+run =True
+#drawing picture or something
+def draw():
+	red_health_text = HEALTH_FONT.render("Health:" + str(red_health),1,WHITE)
+	WIN.blit(text, (x,y))
+	win.blit(object,(x,y))
+
+HEALTH_FONT = pygame.font.SysFont('comicsans',40)
+
+
+RED_HIT=pygame.USEREVENT+1 #the number to distinguish different event
+YELLOW_HIT = pygame.USEREVENT +2
+#main function
+def main():
+	clock=pygame.time.clock()
+	
+
+	while run:	
+
+	
+	for event in pygame.event.get():
+		clock.tick(FPS) #run the while loop how many times a second
+		
+		if event.type == pygame.QUIT:
+			run =False
+		if event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_LCTRL:
+				'''
+				some you want to do
+		if event.type == RED_HIT
+		
+		if event.type == YELLOW_HIT:
+			music.play()
+				
+	if ... :
+		pygame.event.post(pygame.event.Event(RED_HIT)	 #post the event of RED_HIT
+
+	keys_pressed = pygame.key.get_pressed() #which key is being pressed down
+	if keys_pressed[pygame.k_a]: 		#when a is pressed
+		'''
+
+		#something you want to do
+
+
+		'''
+	pygame.quit()
